@@ -24,7 +24,7 @@ class Checkout {
 
     const token = localStorage.getItem('token');
     if (token){
-      fetch('http://localhost:8080/shop/checkout-session',{
+      fetch('/shop/checkout-session',{
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ class Checkout {
   async getCheckout() {
     let cartquery = JSON.parse(localStorage.getItem('cartitems')).join('-')
           try {
-            const response = await fetch(`http://localhost:8080/shop/cart?cart=${cartquery}`);
+            const response = await fetch(`/shop/cart?cart=${cartquery}`);
             const result = await response.json();
             // console.log(result);
             this.renderCheckout(result);

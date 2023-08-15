@@ -11,24 +11,24 @@ class Index extends Cart {
     this.counter = this.cartlist.length;
     this.addproduct = document.querySelectorAll(".data-set");
 
-    this.getProducts("http://localhost:8080/shop?page=0");
+    this.getProducts("/shop?page=0");
 
     this.newSeasonBtn.addEventListener("click", () => {
-      this.getProducts("http://localhost:8080/shop?page=0");
+      this.getProducts("/shop?page=0");
       this.onSaleBtn.classList.remove("click");
       this.teenKitsBtn.classList.remove("clicked");
       this.newSeasonBtn.classList.add("clicked");
     });
 
     this.teenKitsBtn.addEventListener("click", () => {
-      this.getProducts("http://localhost:8080/shop?page=1");
+      this.getProducts("/shop?page=1");
       this.teenKitsBtn.classList.add("clicked");
       this.newSeasonBtn.classList.remove("clicked");
       this.onSaleBtn.classList.remove("click");
     });
 
     this.onSaleBtn.addEventListener("click", () => {
-      this.getProducts("http://localhost:8080/shop?page=2");
+      this.getProducts("/shop?page=2");
 
       this.onSaleBtn.classList.add("click");
       this.teenKitsBtn.classList.remove("clicked");

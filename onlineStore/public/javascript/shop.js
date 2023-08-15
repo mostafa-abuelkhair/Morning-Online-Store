@@ -49,14 +49,14 @@ class Products extends Cart {
     if (this.page === 0) return;
     this.page--;
     console.log(this.page);
-    this.get(`http://localhost:8080/shop?page=${this.page}`);
+    this.get(`/shop?page=${this.page}`);
     this.changepagenumber();
   };
 
   pageup = () => {
     this.page++;
     console.log(this.page);
-    this.get(`http://localhost:8080/shop?page=${this.page}`);
+    this.get(`/shop?page=${this.page}`);
     this.changepagenumber();
   };
 
@@ -265,11 +265,11 @@ class SortAndFilter extends Products {
 }
 
 const products = new Products();
-products.get(`http://localhost:8080/shop?page=${products.page}`);
+products.get(`/shop?page=${products.page}`);
 products.setCounter();
 
 const sortAndFilter = new SortAndFilter(
-  "http://localhost:8080/shop",
+  "/shop",
   products.page
 );
 window.products = products;

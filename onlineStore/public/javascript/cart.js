@@ -21,7 +21,7 @@ export default class Cart {
     try {
       if (this.cartquery) {
         const response = await fetch(
-          `http://localhost:8080/shop/cart?cart=${this.cartquery}`
+          `/shop/cart?cart=${this.cartquery}`
         );
         const result = await response.json();
         console.log(result);
