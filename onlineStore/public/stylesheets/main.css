@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+html{
+  width: 100% !important;
+  overflow-x: hidden;
+}
+
 .hero .item {
   width: 100% !important;
 }
@@ -17,6 +22,7 @@
 
 .hero .item .image-container img {
   height: 500px !important;
+  object-fit: cover;
 }
 .scale-down-center {
   -webkit-animation: scale-down-center 8s cubic-bezier(0.25, 0.46, 0.45, 0.94)

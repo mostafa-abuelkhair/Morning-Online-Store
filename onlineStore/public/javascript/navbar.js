@@ -58,7 +58,7 @@ class Navbar {
 
   async getSearch(inputValue) {
     try {
-      const response = await fetch(`http://localhost:8080/shop/search?search=${inputValue}`);
+      const response = await fetch(`/shop/search?search=${inputValue}`);
       const result = await response.json();
       // console.log(result);
       this.renderSearch(result);

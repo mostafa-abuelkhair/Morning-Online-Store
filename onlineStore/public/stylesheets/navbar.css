@@ -1,6 +1,9 @@
 nav {
   width: 100vw;
 }
+nav a{
+  color: black;
+}
 nav .first-nav {
   color: white;
   background-color: #212121;

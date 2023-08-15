@@ -57,6 +57,7 @@ footer .first-footer p {
 
 footer .second-footer {
   margin-top: 3rem;
+  width: 100%;
   /* margin-left: 20px; */
 }
 
@@ -80,6 +81,11 @@ footer .second-footer i {
   border-radius: 50%;
   margin: 10px;
   transition: 0.4s;
+}
+
+footer .second-footer .col-lg-6{
+  margin-bottom: 30px;
+  padding: 30px;
 }
 
 footer .second-footer i:hover {

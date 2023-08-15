@@ -16,7 +16,7 @@ class Product {
 
     async get() {
         try {
-            const response = await fetch(`http://localhost:8080/shop/product?id=${this.query.id}`);
+            const response = await fetch(`/shop/product?id=${this.query.id}`);
             const result = await response.json();
             console.log(result);
             this.renderProduct(result);
