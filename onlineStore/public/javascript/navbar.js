@@ -143,6 +143,7 @@ try{
   
   if (role === "admin" || role ==="super admin"){
     document.getElementById("adminPanelNav").classList.remove("d-none")
+    document.getElementById("adminPanelNav2").classList.remove("d-none")
   }
 }
 catch{
