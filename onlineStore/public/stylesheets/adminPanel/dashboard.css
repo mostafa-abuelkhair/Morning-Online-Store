@@ -10,11 +10,11 @@ header.dash{
 
 header.dash h1{
     font-size: 30px;
-    width: 70%;
+    width: 60%;
     min-width: 400px;
 }
 header.dash div{
-    width: 30%;
+    width: 40%;
 }
 header.dash div input{
     border: none;
@@ -28,6 +28,7 @@ header.dash div i{
 
 .grid{
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'value1 value2 value3' 'active statistics statistics' 'recent recent sales';
     column-gap: 30px;

@@ -3,7 +3,7 @@ body,html{
     margin: 0px;
     padding: 0px;
     display: flex;
-    width:fit-content;
+    width:100%;
     background-color: rgb(245, 247, 250);
     --black:#3d464d;
     --yellow:#ffd333;
@@ -156,4 +156,10 @@ body,html{
         width: 250px;
     }
 
+}
+
+@media only screen and (max-width: 720px) {
+html,body{
+    width: fit-content;
+}
 }
