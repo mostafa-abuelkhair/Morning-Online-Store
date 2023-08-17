@@ -7,9 +7,9 @@ const getOrders  =  async(req,res) => {
         const searchValue = req.params['searchValue'] || "";
         const skip = req.params['skip'];
     
-        const orders = await ordersModel.find({"shippingInfo.first_name" : {$regex : searchValue}}).limit(9).skip(skip);
+        const orders = await ordersModel.find({"shippingInfo.first_name" : {$regex : searchValue, $options : 'i'}}).limit(9).skip(skip);
     
-        const count = await ordersModel.countDocuments({"shippingInfo.first_name" : {$regex : searchValue}});
+        const count = await ordersModel.countDocuments({"shippingInfo.first_name" : {$regex : searchValue, $options : 'i'}});
     
         res.send({orders: orders, count:count});
     

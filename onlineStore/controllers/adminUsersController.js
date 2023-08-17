@@ -7,9 +7,9 @@ const getUsers  =  async(req,res) => {
         const searchValue = req.params['searchValue'] || "";
         const skip = req.params['skip'];
     
-        const users = await usersModel.find({"email" : {$regex : searchValue}}).limit(9).skip(skip);
+        const users = await usersModel.find({"email" : {$regex : searchValue, $options : 'i'}}).limit(9).skip(skip);
     
-        const count = await usersModel.countDocuments({"email" : {$regex : searchValue}});
+        const count = await usersModel.countDocuments({"email" : {$regex : searchValue, $options : 'i'}});
     
         res.send({users: users, count:count});
     
